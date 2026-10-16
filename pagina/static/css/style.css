@@ -1,0 +1,219 @@
+/* ================= ESTILOS DA MOLDURA (BASE) ================= */
+/* ================= ESTILOS DA MOLDURA (BASE) ================= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Adicionado flexbox no body para a página preencher toda a altura do monitor */
+body { 
+    background-color: rgb(31, 30, 30); 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+/* O cabeçalho agora ocupa 100% da largura e não tem margens laterais */
+header { 
+    justify-content: center; 
+    align-items: center; 
+    display: flex; 
+    background-color: rgb(57, 66, 66); 
+    width: 100%; 
+    padding: 20px 0; 
+}
+
+/* O main ocupa 100% da largura e estica (flex: 1) para preencher a tela */
+main { 
+    width: 100%; 
+    flex: 1; 
+    display: flex; 
+}
+
+/* A navegação lateral mantém os seus 20% de proporção */
+nav { 
+    text-align: center; 
+    background-color: rgb(70, 80, 80); 
+    width: 20%; 
+    padding: 20px 10px; 
+}
+
+/* A caixa de conteúdo ocupa os 80% restantes colada ao menu */
+.caixa-mestra { 
+    background-color: rgb(255, 255, 255); 
+    width: 80%; 
+    overflow-y: auto; 
+}
+
+/* O rodapé agora ocupa 100% e cola no fundo da página */
+footer { 
+    background-color: rgb(62, 62, 68); 
+    justify-content: center; 
+    align-items: center; 
+    display: flex; 
+    width: 100%; 
+    padding: 15px 0; 
+}
+
+.criadores { display: flex; flex-direction: row; justify-content: center; gap: 40px; width: 100%; margin-bottom: 15px; }
+.criadores2 { display: flex; flex-direction: column; width: 100%; }
+.direitos-reservados { text-align: center; margin: 0; }
+.padraotxt { color: aliceblue; text-align: center; }
+.txtrodape { margin: 0 15px; }
+.botoes { width: 90%; margin-bottom: 8px; text-align: center; font-size: 30px; border-radius: 15px; border: 2px solid black; background-color: rgb(85, 85, 85); cursor: pointer; color: white;}
+
+@media (max-width: 768px) { 
+    main { flex-direction: column; } 
+    nav, .caixa-mestra { width: 100%; } 
+}
+
+/* ================= ESTILOS DOS CONTEÚDOS ================= */
+/* Pag Principal */
+.pag-principal { text-align: center; background-color: rgb(31, 30, 30); padding: 20px; min-height: 100%; }
+.pag-principal img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.pag-principal h1, .pag-principal p { color: white; }
+
+/* Currículos Gerais */
+.curriculo-box { text-align: center; width: 100%; background-color: rgb(31, 30, 30); padding: 20px; min-height: 100%; color: white;}
+.curriculo-box .borda { border: 1px solid black; padding: 10px; margin-bottom: 10px;}
+.curriculo-box img { width: 250px; height: 250px; object-fit: cover; border-radius: 50%; display: block; margin: 10px auto; }
+
+/* Currículo Mikael Específico */
+/* ================= Currículo e Tema Mikael ================= */
+.curriculo-mikael { 
+    width: 100%;           
+    min-height: 100%;      
+    background-color: rgb(31, 30, 30); 
+    padding: 20px 0;       
+    text-align: center; /* Garante que tudo (títulos e textos soltos) fique no centro */
+}
+
+/* Centraliza o bloco das tabelas e define a largura correta */
+.firstinform, .secondinform { 
+    width: 90%; 
+    margin: 0 auto;        
+    display: flex; 
+}
+
+.infos { 
+    width: 33.33%; 
+    background-color: rgb(44, 44, 44); 
+    flex: 1; 
+    border: 1px solid black; 
+    padding: 15px;
+    /* Flexbox para garantir que o texto dentro das caixas fica perfeitamente ao centro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+.xadrez { 
+    background-color: rgb(58, 58, 58); 
+}
+
+/* ================= Classes de Imagens e Textos (Mikael) ================= */
+.imgredonda {
+    display: block;
+    margin: 10px auto; 
+    border-radius: 50%; /* Deixa a imagem redonda */
+    width: 200px;       /* Trava o tamanho em 200px para não ficar gigante */
+    height: 200px;
+    object-fit: cover;  /* Mantém a proporção da foto */
+}
+
+.Mikael {
+    font-size: 200%;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formac {
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+.linkloja {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Tema Mikael */
+/* ================= Tema Mikael ================= */
+.tema-mikael { 
+    width: 100%;           /* Preenche o fundo branco totalmente */
+    min-height: 100%;
+    background-color: rgb(31, 30, 30); /* Mantém o padrão escuro das outras páginas */
+    color: white; 
+    text-align: center; 
+    padding: 20px 0;
+}
+
+.tema-mikael .subord { 
+    width: 90%;            /* A "tabela" de componentes fica com 90% */
+    margin: 0 auto 10px auto; /* Centraliza as caixas e dá um espaço entre elas */
+    background-color: rgb(44, 44, 44); 
+    border: 1px solid black; 
+    padding: 15px; 
+}
+
+/* Tema Otávio (Picaretas) */
+/* ================= Tema Otávio (Picaretas) ================= */
+.tema-otavio { 
+    background-image: url('/static/img/terra.png'); 
+    padding: 20px; 
+    color: whitesmoke; 
+    /* Estas duas linhas resolvem o problema da tabela: */
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.tema-otavio .cabecalho, .tema-otavio .colunas { 
+    width: 19%; 
+    border: 1px solid whitesmoke; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding: 10px; 
+    background-color: rgba(0,0,0,0.5);
+}
+
+.tema-otavio .cabecalho { 
+    font-size: 20px; 
+    font-weight: bold; 
+    height: 80px;
+}
+
+.tema-otavio .colunas { 
+    height: 200px; /* Garante que as linhas da tabela fiquem alinhadas */
+}
+
+.tema-otavio .inf { 
+    width: 95%; 
+    border: 1px solid whitesmoke; 
+    text-align: center; 
+    font-size: 25px; 
+    padding: 20px; 
+    margin-top: 10px; 
+    background-color: rgba(0,0,0,0.5);
+}
+
+.tema-otavio img { 
+    max-width: 100%; 
+    height: auto; 
+}
+
+/* Tema Amanda (Dean) */
+.tema-amanda { text-align: center; border: 1px solid black; color: white; background-color: rgb(31, 30, 30); padding: 20px; min-height: 100%;}
+.tema-amanda img { display: block; margin: 0 auto 20px auto; max-width: 100%; }
+
+/* Contato & Sucesso */
+.contato-form, .sucesso-msg { background-color: rgb(31, 30, 30); color: white; padding: 30px; min-height: 100%; }
+.contato-form fieldset { padding: 20px; }
+.contato-form input, .contato-form select, .contato-form textarea { width: 100%; margin-bottom: 15px; padding: 5px; }
+.contato-form input[type="radio"] { width: auto; }
+.contato-form input[type="submit"] { width: 200px; cursor: pointer; }

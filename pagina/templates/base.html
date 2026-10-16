@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MHA Pages</title>
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>     
+    <header> 
+        <h1 class="padraotxt">Página do Mikael, Otávio e Amanda</h1> 
+    </header>
+    
+    <main>
+        <nav>        
+            {% for item in menu %}
+                {% if item.tipo_destino == 'interno' and item.conteudo %}
+                    <!-- Substituímos as aspas simples por duplas em "conteudo_detalhe" para não conflitar -->
+                    <button class="botoes" type="button" onclick="window.location.href='{% url 'conteudo_detalhe' item.conteudo.slug %}'">
+                        {{ item.titulo }}
+                    </button>
+                {% elif item.tipo_destino == 'externo' %}
+                    <button class="botoes" type="button" onclick="window.open('{{ item.url_externa }}', '_blank')">
+                        {{ item.titulo }}
+                    </button>
+                {% endif %}
+            {% endfor %}
+            
+        </nav>
+                
+        <article class="caixa-mestra">
+            {% if conteudo %}
+                {{ conteudo.conteudo_html|safe }}
+            {% else %}
+                {% block content %}{% endblock content %}
+            {% endif %}
+        </article>
+    </main>
+
+    <footer class="criadores2">
+        <div class="criadores">
+            <p class="padraotxt">Mikael Jatobá <br> mvaj1@aluno.ifal.edu.br</p>
+            <p class="padraotxt">Otávio Holanda <br> loah1@aluno.ifal.edu.br</p>
+            <p class="padraotxt">Amanda Novais <br> atn1@aluno.ifal.edu.br</p>
+        </div>  
+        <div>
+            <p class="padraotxt txtrodape direitos-reservados">&copy; 2026 - Todos os direitos reservados.</p>
+        </div>
+    </footer>  
+</body>
+</html>
