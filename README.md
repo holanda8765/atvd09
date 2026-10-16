@@ -11,20 +11,21 @@
 **1. Ativar o ambiente e instalar dependências:**
 ```bash
 python -m venv venv
-venv\Scripts\activate.p1 <!-- no vscode -->
-source venv/bni/activate <!-- no terminal do ubuntu -->
+venv\Scripts\activate      # no vscode (Windows)
+source venv/bin/activate   # no terminal do ubuntu (Linux/Mac)
 pip install -r requirements.txt
 
-2. Configurar a base de dados e criar administrador:
-
+**2. Configurar a base de dados e criar administrador:
 ```bash
 python manage.py migrate
 python manage.py createsuperuser
-3. Rodar o servidor:
 
+**3. iniciar:
 ```bash
 python manage.py runserver
-3. Acesso
+
+**4. Acesso
+
 Site: http://127.0.0.1:8000/
 
 Admin: http://127.0.0.1:8000/admin
