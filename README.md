@@ -4,15 +4,15 @@
 * Amanda Tavares Novais
 * Luiz Otávio de Assis Holanda
 * Mikael Vinícius de Albuquerque Jatobá
-(Turma 523)
+**(Turma 523)**
 
 ## Como executar o projeto
 
 **1. Ativar o ambiente e instalar dependências:**
 ```bash
 python -m venv venv
-venv\Scripts\activate      # no vscode (Windows)
-source venv/bin/activate   # no terminal do ubuntu (Linux/Mac)
+.\venv\Scripts\Activate.ps1      # no vscode (Windows)
+source venv/bin/activate         # no terminal do ubuntu (Linux/Mac)
 pip install -r requirements.txt
 ```
 **2. Configurar a base de dados e criar administrador:
