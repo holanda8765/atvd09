@@ -14,16 +14,16 @@ python -m venv venv
 venv\Scripts\activate      # no vscode (Windows)
 source venv/bin/activate   # no terminal do ubuntu (Linux/Mac)
 pip install -r requirements.txt
-
+```
 **2. Configurar a base de dados e criar administrador:
 ```bash
 python manage.py migrate
 python manage.py createsuperuser
-
+```
 **3. iniciar:
 ```bash
 python manage.py runserver
-
+```
 **4. Acesso
 
 Site: http://127.0.0.1:8000/
